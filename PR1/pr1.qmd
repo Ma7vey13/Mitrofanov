@@ -1,0 +1,199 @@
+# Системы аутентификациии и защиты от несанкционированного доступа
+
+Практическая работа №1
+
+## Цель
+
+Вывести информацию о системе
+
+## Исходные данные
+
+1.  ОС Windows 11
+2.  RStudio Desktop
+3.  Интерпретатор языка R 4.2.2
+
+## План
+
+1.  Выполнить команду system2("systeminfo", stdout = TRUE)
+2.  Выполнить команду system("wmic cpu get name")
+3.  Выполнить команду system("wevtutil el", intern = TRUE)
+
+## Шаги
+
+1.  Выполнение команды system2("systeminfo", stdout = TRUE) для вывод информации о системе windows
+
+```{r}
+system2("systeminfo", stdout = TRUE)
+```
+
+\[1\] ""
+
+\[2\] "Host Name: LAPTOP-NOIR"
+
+\[3\] "OS Name: Microsoft Windows 11 Home Single Language"
+
+\[4\] "OS Version: 10.0.22621 N/A Build 22621"
+
+\[5\] "OS Manufacturer: Microsoft Corporation"
+
+\[6\] "OS Configuration: Standalone Workstation"
+
+\[7\] "OS Build Type: Multiprocessor Free"
+
+\[8\] "Registered Owner: Matvey"
+
+\[9\] "Registered Organization: N/A"
+
+\[11\] "Original Install Date: 11.02.2023, 1:59:18"
+
+\[12\] "System Boot Time: 08.03.2023, 12:17:30"
+
+\[13\] "System Manufacturer: HUAWEI"
+
+\[14\] "System Model: CREM-WXX9"
+
+\[15\] "System Type: x64-based PC"
+
+\[16\] "Processor(s): 1 Processor(s) Installed."
+
+\[17\] " \[01\]: AMD64 Family 25 Model 80 Stepping 0 AuthenticAMD \~3201 Mhz"
+
+\[18\] "BIOS Version: HUAWEI 2.26, 13.05.2022"
+
+\[19\] "Windows Directory: C:\\\\WINDOWS"
+
+\[20\] "System Directory: C:\\\\WINDOWS\\\\system32"
+
+\[21\] "Boot Device: \\\\Device\\\\HarddiskVolume1"
+
+\[22\] "System Locale: ru;Russian"
+
+\[23\] "Input Locale: ru;Russian"
+
+\[24\] "Time Zone: (UTC+03:00) Moscow, St. Petersburg"
+
+\[25\] "Total Physical Memory: 15 724 MB"
+
+\[26\] "Available Physical Memory: 8 193 MB"
+
+\[27\] "Virtual Memory: Max Size: 24 428 MB"
+
+\[28\] "Virtual Memory: Available: 16 314 MB"
+
+\[29\] "Virtual Memory: In Use: 8 114 MB"
+
+\[30\] "Page File Location(s): C:\\\\pagefile.sys"
+
+\[31\] "Domain: WORKGROUP"
+
+\[33\] "Hotfix(s): 4 Hotfix(s) Installed."
+
+\[38\] "Network Card(s): 1 NIC(s) Installed."
+
+\[39\] " \[01\]: Realtek 8822CE Wireless LAN 802.11ac PCI-E NIC"
+
+\[40\] " Connection Name: Беспроводная сеть"
+
+\[41\] " DHCP Enabled: Yes"
+
+\[42\] " DHCP Server: 192.168.1.1"
+
+\[43\] " IP address(es)"
+
+\[46\] "Hyper-V Requirements: VM Monitor Mode Extensions: Yes"
+
+\[47\] " Virtualization Enabled In Firmware: Yes"
+
+\[48\] " Second Level Address Translation: Yes"
+
+\[49\] " Data Execution Prevention Available: Yes"
+
+2.  Выполнение команды system("wmic cpu get name") для информации о процессоре
+
+```{r}
+system("wmic cpu get name")
+```
+
+Name
+
+AMD Ryzen 7 5800H with Radeon Graphics
+
+3.  Выполнение команды system("wevtutil el", intern = TRUE) для получение информации о логах
+
+```{r}
+system("wevtutil el", intern = TRUE)
+```
+
+\[1\] "AMSI/Debug"
+
+\[2\] "AirSpaceChannel"
+
+\[3\] "Analytic"
+
+\[4\] "Application"
+
+\[5\] "DirectShowFilterGraph"
+
+\[6\] "DirectShowPluginControl"
+
+\[7\] "Els_Hyphenation/Analytic"
+
+\[8\] "EndpointMapper"
+
+\[9\] "FirstUXPerf-Analytic"
+
+\[10\] "ForwardedEvents"
+
+\[11\] "General Logging"
+
+\[12\] "Goodix-FingerprintProvider/Debug"
+
+\[13\] "HardwareEvents"
+
+\[14\] "IHM_DebugChannel"
+
+\[15\] "Intel-iaLPSS-GPIO/Analytic"
+
+\[16\] "Intel-iaLPSS-I2C/Analytic"
+
+\[17\] "Intel-iaLPSS2-GPIO2/Debug"
+
+\[18\] "Intel-iaLPSS2-GPIO2/Performance"
+
+\[19\] "Intel-iaLPSS2-I2C/Debug"
+
+\[20\] "Intel-iaLPSS2-I2C/Performance"
+
+\[21\] "Internet Explorer"
+
+\[22\] "Kaspersky Event Log"
+
+\[23\] "Key Management Service"
+
+\[24\] "MF_MediaFoundationDeviceMFT"
+
+\[25\] "MF_MediaFoundationDeviceProxy"
+
+\[26\] "MF_MediaFoundationFrameServer"
+
+\[27\] "MedaFoundationVideoProc"
+
+\[28\] "MedaFoundationVideoProcD3D"
+
+\[29\] "MediaFoundationAsyncWrapper"
+
+\[30\] "MediaFoundationContentProtection"
+
+\[31\] "MediaFoundationDS"
+
+\[32\] "MediaFoundationDeviceProxy"
+
+\[33\] "MediaFoundationMP4"
+
+## Оценка результата
+
+В результате лабораторной работы мы получили основную информацию об ОС, процессоре и логи системы.
+
+## Вывод
+
+Таким образом были получены навыки работы с командыми windows с помощью языка R
