@@ -29,7 +29,7 @@ system2("systeminfo", stdout = TRUE)
 2.  Выполнение команды system("wmic cpu get name") для информации о процессоре
 
 ```{r}
-system("wmic cpu get name")
+system2("cmd", args = c("/c", "wmic cpu get name"), stdout = TRUE)
 ```
 
 3.  Выполнение команды system("powershell.exe", args = c("Get-EventLog", "-LogName", "System", "-Newest", "30"), stdout = TRUE) для получение информации о логах
