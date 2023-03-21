@@ -54,7 +54,7 @@ awk '/^[^#]/ {print $10}' dns.log >> dns
 
 ### Шаг 3
 
-Собрать данные об источниках нежелательного трафика, в данном случае с github – https://github.com/StevenBlack/hosts/blob/master/data/KADhosts/hosts
+Собрать данные об источниках нежелательного трафика, в данном случае с github – [https://github.com/StevenBlack/hosts/blob/master/data/KADhosts/hosts](https://github.com/StevenBlack/hosts/tree/master/data)
 
 С репозитория взяты несколько файлов и объединенны в один файл hosts с помощью команды cat hosts2 >> hosts1
 
