@@ -58,8 +58,8 @@ awk '/^[^#]/ {print $10}' dns.log >> dns
 
 С репозитория взяты несколько файлов и объединенны в один файл hosts с помощью команды cat hosts2 >> hosts1
 
-Вычленение из hosts:
-cat hosts | cut -d " " -f2 >> hosts
+Вычленение из hosts1:
+cat hosts1 | cut -d " " -f2 >> hosts
 
 ### Шаг 4
 
