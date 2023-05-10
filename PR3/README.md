@@ -12,10 +12,10 @@
 
 ## Задание
 
-1.  Развернуть систему мониторинга на базе Opensearch
-    -   Opensearch
+1.  Развернуть систему мониторинга на базе Elasticsearch
+    -   Elasticsearch
     -   Beats (Filebeat, Packetbeat)
-    -   OpenSearch Dashboards
+    -   Elasticsearch Dashboards
 2.  Настроить сбор информации о сетевом трафике
 3.  Настроить сбор информации из файлов журналов (лог-файлов)
 4.  Оформить отчет в соответствии с шаблоном
