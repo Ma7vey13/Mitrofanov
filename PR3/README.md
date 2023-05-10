@@ -24,8 +24,7 @@
 
 ### Шаг 1. Развернуть систему мониторинга на базе ElasticSearch
 
-#### 1. Установка и настройка Elasticsearch и Kibana произведена по информации с сайтов:
-https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
+#### 1. Установка и настройка Elasticsearch и Kibana произведена по информации с сайтов: https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html и https://serveradmin.ru/ustanovka-i-nastroyka-elasticsearch-logstash-kibana-elk-stack/
 
 #### 2. Для работы ElasticSearch требуется увеличить размер виртуальной памяти системы:
     sudo sysctl -w vm.max_map_count=262144
