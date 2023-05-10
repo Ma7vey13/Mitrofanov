@@ -17,6 +17,7 @@
 1) Установка и настройка Elasticsearch и Kibana произведена по информации с сайтов:
 
 https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
+
 https://serveradmin.ru/ustanovka-i-nastroyka-elasticsearch-logstash-kibana-elk-stack/
 
 2) Для работы ElasticSearch требуется увеличить размер виртуальной памяти системы:
@@ -27,18 +28,25 @@ sudo sysctl -w vm.max_map_count=262144
 
 3) В новой директории необходимо создать файл .env для хранения параметров окружения
 
-ELASTIC_PASSWORD=XgV2s7avFI+AWIYpY
-KIBANA_PASSWORD=_V2hkw02naBt6nWtT8ba
-STACK_VERSION=8.7.1
-CLUSTER_NAME=docker-cluster
-LICENSE=basic
-ES_PORT=9200
-KIBANA_PORT=5601
-MEM_LIMIT=1073741824
+ELASTIC_PASSWORD=XgV2s7avFI+AWIYpY - пароль пользователя elastic
+
+KIBANA_PASSWORD=_V2hkw02naBt6nWtT8ba - пароль пользователя kibana_system
+
+STACK_VERSION=8.7.1 - версия образов
+
+CLUSTER_NAME=docker-cluster - имя кластера
+
+LICENSE=basic - лицензия
+
+ES_PORT=9200 - порт elasticsearch
+
+KIBANA_PORT=5601 порт kibana
+
+MEM_LIMIT=1073741824 - лимит памяти
 
 ### Шаг 2. Создание docker-compose.yml
 
-В файле прописываем параметры контейнера Elasticsearch, Kibana, Filebeat, Packetbeat, nginx
+В файле прописываем параметры контейнеров Elasticsearch, Kibana, Filebeat, Packetbeat, nginx
 ```()
 version: '3'
 services:
@@ -227,7 +235,7 @@ volumes:
 ### Шаг 3. В нашей директории создаем файлы filebeat.yml и packetbeat.yml
 
 1) Файл конфигурации Filebeat
-
+```()
 filebeat.inputs:
 - type: filestream
   id: sys-logs
@@ -243,9 +251,10 @@ output.elasticsearch:
     certificate_authorities: "/usr/share/elasticsearch/config/certs/ca/ca.crt"
     certificate: "/usr/share/elasticsearch/config/certs/filebeat/filebeat.crt"
     key: "/usr/share/elasticsearch/config/certs/filebeat/filebeat.key"
-    
-2) Файл конфигурации Packetbeat
+```
 
+2) Файл конфигурации Packetbeat
+```()
 packetbeat.interfaces.device: any
 
 packetbeat.flows:
@@ -292,6 +301,7 @@ output.elasticsearch:
     certificate_authorities: "/usr/share/elasticsearch/config/certs/ca/ca.crt"
     certificate: "/usr/share/elasticsearch/config/certs/packetbeat/packetbeat.crt"
     key: "/usr/share/elasticsearch/config/certs/packetbeat/packetbeat.key"
+```
 
 ### Шаг 4. Запуск docker-compose
 ```()
