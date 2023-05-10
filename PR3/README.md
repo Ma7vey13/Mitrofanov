@@ -24,13 +24,13 @@
 
 ##### Шаг 1. Развернуть систему мониторинга на базе ElasticSearch
 
-Развертывание Elasticsearch осуществлялось с помощью Docker.
+    Развертывание Elasticsearch осуществлялось с помощью Docker.
 
 1. Установка и настройка Elasticsearch и Kibana произведена по информации с сайтов:
 
-https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
+    https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
 
-https://serveradmin.ru/ustanovka-i-nastroyka-elasticsearch-logstash-kibana-elk-stack/
+    https://serveradmin.ru/ustanovka-i-nastroyka-elasticsearch-logstash-kibana-elk-stack/
 
 2. Для работы ElasticSearch требуется увеличить размер виртуальной памяти системы:
 
@@ -60,7 +60,7 @@ MEM_LIMIT=1073741824 - лимит памяти
 
 ##### Шаг 2. Создание docker-compose.yml
 
-В файле прописываем параметры контейнеров Elasticsearch, Kibana, Filebeat, Packetbeat, nginx
+    В файле прописываем параметры контейнеров Elasticsearch, Kibana, Filebeat, Packetbeat, nginx
 
 ```()
 version: '3'
