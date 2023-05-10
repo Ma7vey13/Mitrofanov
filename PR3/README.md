@@ -314,6 +314,7 @@ docker-compose up -d
 ```
 ![docker-compose up](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/1da59fb3-a9ce-4101-8e17-0fa6a0241869)
 
+Активные контейнеры:
 ```()
 docker ps
 ```
@@ -334,13 +335,18 @@ GET _cat/indices
 
 #### 3. Переходим в раздел "Discover" и создаем новый data view для filebeat
 ![create data view](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/9550e376-a8fc-40d4-a2f6-33765a68b3f1)
+
+Получаем данные:
 ![Filebeat](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/55c17046-1535-4493-9f3f-c09e30a2c5ee)
 
 #### 4. Cоздаем новый data view для packetbeat
 ![Packetbeat](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/0fd60d8c-97d6-467b-b274-07e793917c05)
 
 #### 5. Полученная статистика
+Packetbeat:
 ![packetbeat stat](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/b650cf6b-5fa2-4a12-b671-9b30698f62ea)
+
+Filebeat:
 ![filebeat stat](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/ad25a9d9-2aab-4225-a8aa-672652ab3797)
 
 ## Оценка результата
