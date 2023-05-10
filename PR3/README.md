@@ -1,18 +1,32 @@
-# Развертывание системы мониторинга ELK Stack
+# Сбор и аналитическая обработка информации о сетевом трафике
+
+# Лабораторная работа №3
+
+# Развертывание системы мониторинга ELK Stack (Opensearch)
 
 ## Цель работы
 
-1. Освоить базовые подходы централизованного сбора и накопления информации
+1.  Освоить базовые подходы централизованного сбора и накопления
+    информации
+2.  Освоить современные инструменты развертывания контейнирозованных
+    приложений
+3.  Закрепить знания о современных сетевых протоколах прикладного уровня
 
-2. Освоить современные инструменты развертывания контейнирозованных приложений
+## Задание
 
-3. Закрепить знания о современных сетевых протоколах прикладного уровня
+1.  Развернуть систему мониторинга на базе Opensearch
+    -   Opensearch
+    -   Beats (Filebeat, Packetbeat)
+    -   OpenSearch Dashboards
+2.  Настроить сбор информации о сетевом трафике
+3.  Настроить сбор информации из файлов журналов (лог-файлов)
+4.  Оформить отчет в соответствии с шаблоном
 
-## Ход выполнения практической работы
+## Ход работы:
 
-### Шаг 1. Развернуть систему мониторинга на базе ElasticSearch
+#### Шаг 1. Развернуть систему мониторинга на базе ElasticSearch
 
-Развертывание Elasticsearch осуществлялось с помощью Docker.
+# Развертывание Elasticsearch осуществлялось с помощью Docker.
 
 1) Установка и настройка Elasticsearch и Kibana произведена по информации с сайтов:
 
@@ -28,6 +42,7 @@ sudo sysctl -w vm.max_map_count=262144
 
 3) В новой директории необходимо создать файл .env для хранения параметров окружения
 
+```()
 ELASTIC_PASSWORD=XgV2s7avFI+AWIYpY - пароль пользователя elastic
 
 KIBANA_PASSWORD=_V2hkw02naBt6nWtT8ba - пароль пользователя kibana_system
@@ -43,10 +58,12 @@ ES_PORT=9200 - порт elasticsearch
 KIBANA_PORT=5601 порт kibana
 
 MEM_LIMIT=1073741824 - лимит памяти
+```
 
-### Шаг 2. Создание docker-compose.yml
+#### Шаг 2. Создание docker-compose.yml
 
-В файле прописываем параметры контейнеров Elasticsearch, Kibana, Filebeat, Packetbeat, nginx
+# В файле прописываем параметры контейнеров Elasticsearch, Kibana, Filebeat, Packetbeat, nginx
+
 ```()
 version: '3'
 services:
@@ -232,7 +249,7 @@ volumes:
     driver: local
 ```
 
-### Шаг 3. В нашей директории создаем файлы filebeat.yml и packetbeat.yml
+#### Шаг 3. В нашей директории создаем файлы filebeat.yml и packetbeat.yml
 
 1) Файл конфигурации Filebeat
 ```()
@@ -303,7 +320,8 @@ output.elasticsearch:
     key: "/usr/share/elasticsearch/config/certs/packetbeat/packetbeat.key"
 ```
 
-### Шаг 4. Запуск docker-compose
+#### Шаг 4. Запуск docker-compose
+
 ```()
 docker-compose up -d
 ```
@@ -314,7 +332,7 @@ docker ps
 ```
 ![docker ps](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/702cb87d-0ac1-4e7d-97c3-54660db71f95)
 
-### Шаг 5. Работа с Elasticsearch
+#### Шаг 5. Работа с Elasticsearch
 
 1) Заходим на localhost:5601 и авторизируемся через пользователя elastic
 
