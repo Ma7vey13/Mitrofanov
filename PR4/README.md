@@ -87,10 +87,13 @@ for domain in domains:
 8. Импортируем сетевой трафик (файл dns.log, полученный в PR2) в OpenCTI
 ![Снимок экрана 2023-05-17 224707](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/100acd3b-7e72-402b-9a2e-7045740f21ca)
 
-9. Информация с главной страницы OpenCTI
+9. Добавим dns.log в Workbench
+![image](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/71fd3b2f-3acf-402d-8b47-8354c13cbfab)
+
+10. Информация с главной страницы OpenCTI
 ![image](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/90c743ef-5e90-4622-8982-02e17c647b6d)
 
-10. Переходим в раздел Analitics -> Report, чтобы посмотреть домены с нежелательным трафиком
+11. Переходим в раздел Analitics -> Report, чтобы посмотреть домены с нежелательным трафиком
 ![Снимок экрана 2023-05-18 015022](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/3b2e4b5a-2c2c-4a2c-b605-5240ddc009ac)
 
 ## Оценка результата
