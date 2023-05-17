@@ -82,7 +82,7 @@ for domain in domains:
 7. Преобразуем все индикаторы в Observables
 ![Снимок экрана 2023-05-18 001620](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/bc688176-18f5-431d-a4d0-054d747e8b00)
 
-8. Импортируем сетевой трафик (файл dns.log), полученный в PR2 в OpenCTI
+8. Импортируем сетевой трафик (файл dns.log, полученный в PR2) в OpenCTI
 ![Снимок экрана 2023-05-17 224707](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/100acd3b-7e72-402b-9a2e-7045740f21ca)
 
 9. Информация с главной страницы OpenCTI
