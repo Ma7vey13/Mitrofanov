@@ -26,6 +26,7 @@ echo "CONNECTOR_EXPORT_FILE_TXT_ID=$(uuidgen)" >> .env
 echo "CONNECTOR_IMPORT_FILE_STIX_ID=$(uuidgen)" >> .env
 echo "CONNECTOR_IMPORT_DOCUMENT_ID=$(uuidgen)" >> .env
 ```
+Содержание файла .env:
 ![image](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/20160060-bb0d-4fa5-ba83-a2fcb0381365)
 
 3. В этой же директории создан файл docker-compose.yml
