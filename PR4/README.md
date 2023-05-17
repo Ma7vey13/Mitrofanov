@@ -15,7 +15,8 @@
 sudo sysctl -w vm.max_map_count=1048575
 ```
 
-2. В новой директории был создан файл .env для хранения параметров окружения:
+2. В новой директории был создан файл .env для хранения параметров окружения
+
 Использованы следующие команды для генерации UUIDv4 и записи их в файл .env:
 ```()
 echo "OPENCTI_ADMIN_TOKEN=$(uuidgen)" >> .env
@@ -28,6 +29,7 @@ echo "CONNECTOR_IMPORT_DOCUMENT_ID=$(uuidgen)" >> .env
 ![image](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/20160060-bb0d-4fa5-ba83-a2fcb0381365)
 
 3. В этой же директории создан файл docker-compose.yml
+
 Запуск контейнера с помощью команды:
 ```()
 sudo docker-compose up -d
@@ -35,6 +37,7 @@ sudo docker-compose up -d
 ![image](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/f93df294-38a9-497a-87d8-9be991b5d30e)
 
 4. Заходим в веб-интерфейс OpenCTI `localhost:8088`
+
 Входим по данным пользователя из файла конфигурации окружения:
 ![1](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/29facec5-dc91-424a-990c-7dce2c3c8007)
 
@@ -42,6 +45,7 @@ sudo docker-compose up -d
 ![Снимок экрана 2023-05-17 170828](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/273a5532-4f61-4a56-bcee-9422360dbe03)
 
 6. Далее используем данный код через оболочку Python внутри контейнера для импорта данных из файла hosts.txt
+
 ``` python
 import pycti
 from stix2 import TLP_GREEN
