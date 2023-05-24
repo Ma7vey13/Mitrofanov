@@ -258,6 +258,7 @@ output.elasticsearch:
 ```
 
 #### 2. Файл конфигурации Packetbeat
+Взят отсюда: https://raw.githubusercontent.com/elastic/beats/7.3/deploy/docker/packetbeat.docker.yml
 ```()
 packetbeat.interfaces.device: any
 
