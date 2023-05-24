@@ -51,6 +51,7 @@ MEM_LIMIT=1073741824 - лимит памяти
 ### Шаг 2. Создание docker-compose.yml
 
 #### В файле прописываем параметры контейнеров Elasticsearch, Kibana, Filebeat, Packetbeat, nginx
+Настройки файла взяты с официального сайта elasticsearch: https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
 ```()
 version: '3'
 services:
