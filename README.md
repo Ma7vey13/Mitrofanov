@@ -7,3 +7,5 @@
 3. Развертывание системы мониторинга ELK Stack (ElasticSearch)
 4. Развертывание Threat intelligence Platform OpenCTI
 5. Mindmap ГОСТа
+6. Применение средств и методов OSINT
+7. Создание сайта Quarto Website и Github Pages
