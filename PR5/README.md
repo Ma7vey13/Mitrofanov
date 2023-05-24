@@ -13,7 +13,7 @@
 2. Была использована программа Freeplane
 
 3. Результат
-![mindmap](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/a7c25080-6d83-4e20-ad45-42d8fa3a665e)
+![mindmap](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/36ff469a-cd11-4fe3-9271-1cb4aa99e0e7)
 
 #### Оценка результата
 
