@@ -239,6 +239,7 @@ volumes:
 ### Шаг 3. В нашей директории создаем файлы filebeat.yml и packetbeat.yml
 
 #### 1. Файл конфигурации Filebeat
+Взят из репозитория: https://github.com/elastic/beats/blob/main/filebeat/filebeat.yml
 ```()
 filebeat.inputs:
 - type: filestream
@@ -258,7 +259,7 @@ output.elasticsearch:
 ```
 
 #### 2. Файл конфигурации Packetbeat
-Взят отсюда: https://raw.githubusercontent.com/elastic/beats/7.3/deploy/docker/packetbeat.docker.yml
+Взят из репозитория: https://raw.githubusercontent.com/elastic/beats/7.3/deploy/docker/packetbeat.docker.yml
 ```()
 packetbeat.interfaces.device: any
 
