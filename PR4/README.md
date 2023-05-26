@@ -44,7 +44,7 @@ sudo docker-compose up -d
 ```
 ![image](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/f93df294-38a9-497a-87d8-9be991b5d30e)
 
-4. Заходим в веб-интерфейс OpenCTI `localhost:8088`
+4. Заходим в веб-интерфейс OpenCTI `localhost:8080`
 
 Входим по данным пользователя из файла конфигурации окружения:
 ![1](https://github.com/Ma7vey13/Mitrofanov/assets/92400475/29facec5-dc91-424a-990c-7dce2c3c8007)
